@@ -12,7 +12,7 @@
 <h3>Tools Used</h3>
 <ul>
   <li><strong>Splunk</strong></li>
-  <li><strong>Virtual Machine(Windows10pro)</strong></li>
+  <li><strong>Virtual Box(Windows10pro)</strong></li>
 <hr />
 
 <h2>Step 1: Choosing SIEM Tool</h2>
