@@ -24,11 +24,11 @@
 </a>
 
 <h2>Step 2: Install and Configure Splunk</h2>
-<ul>
-  <ol>Installing Splunk on local machine or a virtual machine (VM).</ol>
-  <ol>Open Splunk Web Interface (Default: http://localhost:8000).</ol>
-  <ol>Create an admin account and log in.</ol>
-  <ol>Adding first data source: Windows Event Logs or Linux Syslogs.</ol>
-</ul>
+<ol>
+  <li>Installing Splunk on local machine or a virtual machine (VM).</li>
+  <li>Open Splunk Web Interface (Default: http://localhost:8000).</li>
+  <li>Create an admin account and log in.</li>
+  <li>Adding first data source: Windows Event Logs or Linux Syslogs.</li>
+</ol>
 
 
