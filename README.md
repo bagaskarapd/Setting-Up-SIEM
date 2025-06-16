@@ -24,11 +24,38 @@
 </a>
 
 <h2>Step 2: Install and Configure Splunk</h2>
-<ol>
+<ul>
   <li>Installing Splunk on local machine or a virtual machine (VM).</li>
   <li>Open Splunk Web Interface (Default: http://localhost:8000).</li>
   <li>Create an admin account and log in.</li>
   <li>Adding first data source: Windows Event Logs or Linux Syslogs.</li>
-</ol>
+</ul>
 
+<h2>Step 3: Collect and Analyze Security Logs</h2>
+<p>
+  Once logs were collected, I performed analysis using SPL (Search Processing Language).
+</p>
+<h4>Example Query: Detect Failed Login Attempts</h4>
+<pre>
+index=_internal sourcetype=auth.log | stats count by user, source_ip
+</pre>
+<p>This query shows failed login attempts per user and IP. Useful for detecting brute-force behavior.</p>
+
+<h2>Step 4: Create Real-Time Alert</h2>
+<p>
+  I created an alert to simulate how SOC teams monitor and respond to active threats.
+</p>
+<ul>
+  <li><strong>Goal:</strong> Trigger an alert when there are 5 or more failed login attempts within 1 minute</li>
+  <li>Navigate to <code>Search & Reporting</code>, enter this query:
+    <pre>
+index=_internal sourcetype=auth.log action=failed 
+| stats count by user, source_ip 
+| where count >= 5
+    </pre>
+  </li>
+  <li>Save it as a Real-Time Alert</li>
+  <li>Set up email or script-based notifications</li>
+</ul>
+<hr />
 
