@@ -19,7 +19,7 @@
 <p>There are several SIEMs out there, but i focus on Splunk (free version) for this lab.
   Splunk is a powerful and widely used SIEM tool. I used the Free Edition, which is sufficient for lab and training purposes.
 </p>
-<a href="https://www.linkedin.com/in/ananda-bagaskara-poetra-dwiki-34492b221/](https://www.splunk.com/en_us/download.html">
+<a href="https://www.splunk.com/en_us/download.html">
   <img src="https://img.shields.io/badge/-Splunk-000000?&style=for-the-badge&logo=Splunk&logoColor=white" />
 </a>
 
