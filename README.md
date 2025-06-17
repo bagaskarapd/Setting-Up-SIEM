@@ -36,19 +36,20 @@
 <h3>Creating a Custom Index (win_logs)</h3>
 <p>Before collecting logs, I created a custom index named <code>win_logs</code> via the Splunk settings under <strong>Settings → Indexes → New Index</strong>. Creating a separate index helped me keep the Windows logs organized and made it easier to run focused search queries. Instead of storing all logs in the default <code>main</code> index, using <code>win_logs</code> allowed me to isolate system event data and simulate how logs would be categorized in a production environment.</p>
 <p align="center">
-  <img src="">
+  <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Win-logs%20index.png?raw=true">
 </p>
 
 <h2>Step 3: Collect and Analyze Security Logs</h2>
 <p align="center">
     <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Analyzing%20Failed%20Login%20Attempts.png?raw=true">
 </p>
-<p>I then proceeded to add a data source by going to <strong>Settings → Add Data → Monitor → Local Event Logs</strong>. From there, I selected the <strong>Security</strong> log, which includes critical Windows Event IDs like <code>4624</code> for successful logins and <code>4625</code> for failed login attempts. I assigned this data source to the <code>win_logs</code> index I had created earlier. By collecting Security logs specifically, I could monitor authentication-related activities and gain insight into who was trying to access the system and whether any access attempts were suspicious.</p>
+<p>I configured Splunk to collect Windows Event Logs by going to the “Add Data” section and choosing to monitor Local Event Logs. I selected three types of logs: <strong>Security</strong>, <strong>System</strong>, and <strong>Application</strong>. Security logs contain login attempts and access control events, which are important for identifying suspicious user behavior. System logs show hardware and service events, which help detect system-level problems or restarts. Application logs give visibility into the behavior of installed software. Collecting all three gave me a broader understanding of system activity and potential risks.
+</p></p>
 <p align="center">
   <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Event%20Log%20Collections.png?raw=true">
 </p>
 <p>
-  Once logs were collected, I performed analysis using SPL (Search Processing Language).
+  Once logs were collected, I performed analysis using SPL (Search Processing Language). For example, I searched for failed login attempts using Event ID 4625, which indicates when someone tried to log in with the wrong credentials. I used simple queries to show how often these attempts happened, and which users or machines were involved. This analysis helped me understand how real-world attacks, like brute-force attempts, could appear in logs—and how a SOC analyst would catch them.
 </p>
 <h4>Example Query: Detect Failed Login Attempts</h4>
 <pre>
