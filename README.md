@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/16321d2d-c454-483c-b60e-7b068efcead8)<h1>Project: Setting Up a SIEM for Threat Detection</h1>
+<h1>Project: Setting Up a SIEM for Threat Detection</h1>
 <p>
   As an Informatics Engineering graduate aspiring to become a Security Operations Center (SOC) Analyst, I created this project to demonstrate my ability to deploy and utilize a Security Information and Event Management (SIEM) solution. This hands-on lab walks through the process of setting up Splunk to monitor, analyze, and detect security threats in real-time.
 </p>
