@@ -1,4 +1,4 @@
-<h1>Project: Setting Up a SIEM for Threat Detection</h1>
+![image](https://github.com/user-attachments/assets/16321d2d-c454-483c-b60e-7b068efcead8)<h1>Project: Setting Up a SIEM for Threat Detection</h1>
 <p>
   As an Informatics Engineering graduate aspiring to become a Security Operations Center (SOC) Analyst, I created this project to demonstrate my ability to deploy and utilize a Security Information and Event Management (SIEM) solution. This hands-on lab walks through the process of setting up Splunk to monitor, analyze, and detect security threats in real-time.
 </p>
@@ -51,11 +51,12 @@
 <p>
   Once logs were collected, I performed analysis using SPL (Search Processing Language). For example, I searched for failed login attempts using Event ID 4625, which indicates when someone tried to log in with the wrong credentials. I used simple queries to show how often these attempts happened, and which users or machines were involved. This analysis helped me understand how real-world attacks, like brute-force attempts, could appear in logs—and how a SOC analyst would catch them.
 </p>
-<h4>Example Query: Detect Failed Login Attempts</h4>
 <pre>
-index=_internal sourcetype=auth.log | stats count by user, source_ip
+index=win_logs sourcetype="WinEventLog:Security" EventCode=4625
+| stats count by user, host
 </pre>
-<p>This query shows failed login attempts per user and IP. Useful for detecting brute-force behavior.</p>
+
+<p align="center">https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk%20SPL.png?raw=true</p>
 
 <h2>Step 4: Create Real-Time Alert</h2>
 <p>
