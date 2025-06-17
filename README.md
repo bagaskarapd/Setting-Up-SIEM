@@ -31,16 +31,21 @@
 </a>
 
 <h2>Step 2: Install and Configure Splunk</h2>
-<ul>
-  <li>Installing Splunk on local machine or a virtual machine (VM).</li>
-  <li>Open Splunk Web Interface (Default: http://localhost:8000).</li>
-  <li>Create an admin account and log in.</li>
-  <li>Adding first data source: Windows Event Logs.</li>
-</ul>
+<p>To begin this project, I installed Splunk Enterprise (Free Edition) on a Windows 10 Pro virtual machine that I set up using VirtualBox. I chose a virtual machine so I could safely experiment and simulate security monitoring without affecting my main system. Once the installation was complete, I accessed the Splunk Web interface through the browser at <code>http://localhost:8000</code>. I created an admin account during the initial setup, which gave me access to the full dashboard and configuration settings. This step was essential because it allowed me to build a controlled environment where I could test real SIEM use cases.</p>
+
+<h3>Creating a Custom Index (win_logs)</h3>
+<p>Before collecting logs, I created a custom index named <code>win_logs</code> via the Splunk settings under <strong>Settings → Indexes → New Index</strong>. Creating a separate index helped me keep the Windows logs organized and made it easier to run focused search queries. Instead of storing all logs in the default <code>main</code> index, using <code>win_logs</code> allowed me to isolate system event data and simulate how logs would be categorized in a production environment.</p>
+<p align="center">
+  <img src="">
+</p>
 
 <h2>Step 3: Collect and Analyze Security Logs</h2>
 <p align="center">
     <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Analyzing%20Failed%20Login%20Attempts.png?raw=true">
+</p>
+<p>I then proceeded to add a data source by going to <strong>Settings → Add Data → Monitor → Local Event Logs</strong>. From there, I selected the <strong>Security</strong> log, which includes critical Windows Event IDs like <code>4624</code> for successful logins and <code>4625</code> for failed login attempts. I assigned this data source to the <code>win_logs</code> index I had created earlier. By collecting Security logs specifically, I could monitor authentication-related activities and gain insight into who was trying to access the system and whether any access attempts were suspicious.</p>
+<p align="center">
+  <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Event%20Log%20Collections.png?raw=true">
 </p>
 <p>
   Once logs were collected, I performed analysis using SPL (Search Processing Language).
