@@ -14,8 +14,12 @@
   <li><strong>Splunk</strong></li>
   <li><strong>Virtual Box(Windows10pro)</strong></li>
 <hr />
+  
+![alt text](https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Setting-Up-SIEM.png?raw=true?raw=true)
 
 <h2>Step 1: Choosing SIEM Tool</h2>
+
+![alt text](https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk.png?raw=true?raw=true)
 <p>There are several SIEMs out there, but i focus on Splunk (free version) for this lab.
   Splunk is a powerful and widely used SIEM tool. I used the Free Edition, which is sufficient for lab and training purposes.
 </p>
