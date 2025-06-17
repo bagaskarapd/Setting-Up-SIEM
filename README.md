@@ -14,12 +14,15 @@
   <li><strong>Splunk</strong></li>
   <li><strong>Virtual Box(Windows10pro)</strong></li>
 <hr />
+ <p align="center">
+    <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Setting-Up-SIEM.png?raw=true">
+</p>
   
-![alt text](https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Setting-Up-SIEM.png?raw=true?raw=true)
 
 <h2>Step 1: Choosing SIEM Tool</h2>
-
-![alt text](https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk.png?raw=true?raw=true)
+<p align="center">
+    <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk.png?raw=true">
+</p>
 <p>There are several SIEMs out there, but i focus on Splunk (free version) for this lab.
   Splunk is a powerful and widely used SIEM tool. I used the Free Edition, which is sufficient for lab and training purposes.
 </p>
@@ -32,10 +35,13 @@
   <li>Installing Splunk on local machine or a virtual machine (VM).</li>
   <li>Open Splunk Web Interface (Default: http://localhost:8000).</li>
   <li>Create an admin account and log in.</li>
-  <li>Adding first data source: Windows Event Logs or Linux Syslogs.</li>
+  <li>Adding first data source: Windows Event Logs.</li>
 </ul>
 
 <h2>Step 3: Collect and Analyze Security Logs</h2>
+<p align="center">
+    <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Analyzing%20Failed%20Login%20Attempts.png?raw=true">
+</p>
 <p>
   Once logs were collected, I performed analysis using SPL (Search Processing Language).
 </p>
