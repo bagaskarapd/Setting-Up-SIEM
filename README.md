@@ -43,8 +43,8 @@
 <p align="center">
     <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Analyzing%20Failed%20Login%20Attempts.png?raw=true">
 </p>
-<p>I configured Splunk to collect Windows Event Logs by going to the “Add Data” section and choosing to monitor Local Event Logs. I selected three types of logs: <strong>Security</strong>, <strong>System</strong>, and <strong>Application</strong>. Security logs contain login attempts and access control events, which are important for identifying suspicious user behavior. System logs show hardware and service events, which help detect system-level problems or restarts. Application logs give visibility into the behavior of installed software. Collecting all three gave me a broader understanding of system activity and potential risks.
-</p></p>
+<p>Next, I needed to feed data into Splunk. Since my VM was running Windows, I chose to monitor Windows Event Logs—specifically, the Security log. This log contains critical login events, such as successful and failed logins, which are important for detecting suspicious behavior like brute-force attacks. I went to the “Add Data” section in Splunk, selected “Monitor,” and then chose “Local Event Logs.” I selected the Security log and assigned it to my custom index win_logs. After saving the configuration, Splunk started collecting event data from the system.
+</p>
 <p align="center">
   <img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Event%20Log%20Collections.png?raw=true">
 </p>
