@@ -1,4 +1,4 @@
-<h1>Project: Setting Up a SIEM for Threat Detection</h1>
+![image](https://github.com/user-attachments/assets/2a94f25b-1a3a-45ba-a424-3423281a5be0)<h1>Project: Setting Up a SIEM for Threat Detection</h1>
 <p>
   As an Informatics Engineering graduate aspiring to become a Security Operations Center (SOC) Analyst, I created this project to demonstrate my ability to deploy and utilize a Security Information and Event Management (SIEM) solution. This hands-on lab walks through the process of setting up Splunk to monitor, analyze, and detect security threats in real-time.
 </p>
@@ -70,9 +70,12 @@ index=_internal sourcetype=auth.log action=failed
 | stats count by user, source_ip 
 | where count >= 5
     </pre>
-  </li>
-  <li>Save it as a Real-Time Alert</li>
-  <li>Set up email or script-based notifications</li>
+    </li>
 </ul>
+    <p>
+To complete the simulation, I created a real-time alert in Splunk. I wrote a query that triggered if a user had five or more failed login attempts within a short time frame. Then, I saved this query as a real-time alert and configured it to notify me. Although I didn’t connect email notifications in this lab, this step mimics what happens in actual SOC environments—where automated systems notify analysts the moment something suspicious occurs. This exercise taught me the process of not only detecting a threat but also responding to it using Splunk’s built-in alerting tools.
+    </p>
+  <p align="center"><img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk%20save%20alert.png?raw=true"></p>
+  <p align="center"><img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk%20save%20alert2.png?raw=true"></p>
 <hr />
 
