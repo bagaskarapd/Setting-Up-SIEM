@@ -56,7 +56,7 @@ index=win_logs sourcetype="WinEventLog:Security" EventCode=4625
 | stats count by user, host
 </pre>
 
-<p align="center">https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk%20SPL.png?raw=true</p>
+<p align="center"><img src="https://github.com/bagaskarapd/Setting-Up-SIEM/blob/main/Screenshots/Splunk%20SPL.png?raw=true"></p>
 
 <h2>Step 4: Create Real-Time Alert</h2>
 <p>
